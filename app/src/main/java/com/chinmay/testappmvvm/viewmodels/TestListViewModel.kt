@@ -8,9 +8,6 @@ class TestListViewModel:BaseViewModel() {
 
     val testListLive = MutableLiveData<ArrayList<Tests>>()
 
-    var flag_list1 = MutableLiveData<Boolean>().apply{ value = true}
-    var flag_list2 = MutableLiveData<Boolean>().apply { value = true }
-
 
     fun fetchTestList(withTerm:String){
         dataLoading.value = true

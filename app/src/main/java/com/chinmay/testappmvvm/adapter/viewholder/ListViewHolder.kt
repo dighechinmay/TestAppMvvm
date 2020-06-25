@@ -1,4 +1,4 @@
-package com.chinmay.testappmvvm.adapter
+package com.chinmay.testappmvvm.adapter.viewholder
 
 import android.os.Build
 import android.view.View

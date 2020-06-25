@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.chinmay.testappmvvm.adapter.ListViewHolder
+import com.chinmay.testappmvvm.adapter.viewholder.ListViewHolder
 import com.chinmay.testappmvvm.databinding.ListitemCardLayoutBinding
 import com.chinmay.testappmvvm.model.Tests
 import com.chinmay.testappmvvm.viewmodels.TestListViewModel
@@ -17,10 +17,13 @@ class TestListAdapter(private val testListViewModel: TestListViewModel): Recycle
 
      var testList = ArrayList<Tests>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ListViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val dataBinding = ListitemCardLayoutBinding.inflate(inflater, parent, false)
-        return ListViewHolder(dataBinding, testListViewModel)
+        return ListViewHolder(
+            dataBinding,
+            testListViewModel
+        )
     }
 
     override fun getItemCount(): Int {

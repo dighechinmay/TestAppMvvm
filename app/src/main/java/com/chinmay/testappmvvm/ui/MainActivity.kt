@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun replaceFragment(tag: String){
+    private fun replaceFragment(tag: String){
 
         val fragment = TestFragment.newInstance(tag)
         supportFragmentManager.inTransaction {
