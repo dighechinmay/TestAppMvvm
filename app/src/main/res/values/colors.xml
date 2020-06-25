@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CDDC39</color>
+    <color name="colorPrimaryDark">#03A9F4</color>
+    <color name="colorAccent">#F44336</color>
+    <color name="cardBackgroundColor">#ECF4F3</color>
+    <color name="test_heading">#2F2F2F</color>
+    <color name="sub_text">#898989</color>
+    <color name="selected">#FFFEFE</color>
+    <color name="deselected">#271B1B</color>
+</resources>

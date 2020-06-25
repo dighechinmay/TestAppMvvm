@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="com.chinmay.testappmvvm.utils.LongUtil"/>
+        <import type="com.chinmay.testappmvvm.utils.StringUtil"/>
+
+        <variable
+            name="itemData"
+            type="com.chinmay.testappmvvm.model.Tests" />
+    </data>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/test_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{itemData.title}"
+                android:textSize="16sp"
+                android:textColor="@color/test_heading"
+                android:fontFamily="monospace"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                />
+
+                <TextView
+                    android:id="@+id/createDate_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@{LongUtil.formatTime(itemData.createdDate)}"
+                    android:textAlignment="center"
+                    android:textColor="@color/sub_text"
+                    android:textSize="12sp" />
+
+               <TextView
+                   android:id="@+id/eventDate_textView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginTop="40dp"
+                   android:text="@{LongUtil.formatDate(itemData.eventDate)}"
+                   android:textAlignment="center"
+                   android:textColor="@color/sub_text"
+                   android:textSize="12sp"
+                   android:layout_below="@+id/test_heading"/>
+
+             <TextView
+                   android:id="@+id/section_textView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginTop="40dp"
+                   android:text="@{StringUtil.formatStdString(itemData.standard,itemData.section)}"
+                   android:textAlignment="center"
+                   android:textColor="@color/sub_text"
+                   android:textSize="12sp"
+                   android:layout_below="@+id/test_heading"
+                   android:layout_toEndOf="@+id/eventDate_textView"/>-->
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
+</layout>

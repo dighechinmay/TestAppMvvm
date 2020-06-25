@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="viewmodel"
+            type="com.chinmay.testappmvvm.viewmodels.TestListViewModel"/>
+
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"      android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:visibility="@{safeUnbox(viewmodel.dataLoading)? View.GONE : View.VISIBLE }"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:layout_centerInParent="true"
+        android:visibility="@{safeUnbox(viewmodel.dataLoading)? View.VISIBLE : View.GONE}">
+    </ProgressBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_message"
+        android:text="No Test To Show"
+        android:layout_centerInParent="true"
+        android:visibility="@{safeUnbox(viewmodel.empty)? View.VISIBLE : View.GONE}"
+        />
+
+
+
+</RelativeLayout>
+</layout>
