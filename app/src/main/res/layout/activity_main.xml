@@ -68,7 +68,7 @@
                     android:fontFamily="monospace"
                     android:gravity="center"
                     android:text="@string/button_two_text"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/deselected"
                     android:textSize="14sp">
 
                 </TextView>
